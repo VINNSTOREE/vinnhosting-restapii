@@ -137,7 +137,7 @@ async function checkQRISStatus() {
 }
 
 module.exports = function(app) {
-app.get('/orkut/createpayment', async (req, res) => {
+app.get('/orderkuota/createpayment', async (req, res) => {
     const { apikey, amount, codeqr} = req.query;
     const check = global.apikey
     if (!global.apikey.includes(apikey)) return res.json("Apikey tidak valid.")
@@ -152,7 +152,7 @@ app.get('/orkut/createpayment', async (req, res) => {
     }
 });
     
-app.get('/orkut/cekstatus', async (req, res) => {
+app.get('/orderkuota/cekstatus', async (req, res) => {
     const { merchant, keyorkut, apikey } = req.query;
     const check = global.apikey
     if (!global.apikey.includes(apikey)) return res.json("Apikey tidak valid.")
